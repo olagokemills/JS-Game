@@ -1,0 +1,164 @@
+<html>
+
+
+
+<head>
+
+		<title>JS TRY</title>
+
+		<style type="text/css">
+			
+		#circle{
+			width:200px;
+			height:200px;
+			border-radius:100px;
+			background-color: red;
+
+		}
+
+		</style>
+
+
+
+</head>
+
+
+
+<body>
+	
+
+	<p> <button id="myButton">Click Me to change that guy</button></p>
+
+
+	<p id="myDiv">I am just minding my own business</p>
+
+
+	<div id="textAppender">Append some text</div>
+
+	<p id="secondDiv"> Javascript is ...</p>
+
+
+	<button id="textCreator">Create some text</button>
+
+	<div id="emptyDiv"></div>
+
+
+
+	<div id="circle"></div>
+
+
+
+	<input type="text" id="myInput" />
+
+	<button id="changer">Change me?</button>
+
+	<p id="arbitraryText"> My first text </p>
+
+	<div>What is the weather</div>
+
+	<input type="text" id="myWeather" />
+
+	<button id="myButton1"> submit</button>
+
+	<p>What is the number</p>
+
+	<input type="text" id="guess" />
+
+	<button id="myButton2">Guess</button>
+
+
+
+
+	<script type="text/javascript">
+		
+		document.getElementById('myButton').onclick=function(){
+
+
+			document.getElementById("myDiv").innerHTML="this is awesome";
+		}
+
+		document.getElementById('textAppender').onclick=function(){
+
+
+			document.getElementById("secondDiv").innerHTML= document.getElementById("secondDiv").innerHTML + "great";
+		}
+
+
+		document.getElementById('textCreator').onclick=function(){
+
+
+			document.getElementById("emptyDiv").innerHTML= "<ul><li>Dog</li><li>Cat</li</ul>";
+		}
+
+		document.getElementById("circle").onclick=function(){
+
+			document.getElementById("circle").style.display="none";
+		}
+
+		var newText = document.getElementById("myInput").value;
+
+		document.getElementById("changer").onclick = function(){
+
+			newText = document.getElementById("myInput").value;
+
+			document.getElementById("arbitraryText").innerHTML= newText;
+		}
+
+		var myArray= new Array();
+		
+			myArray[0] = "pizza";
+			myArray[1] = "chicken";
+
+			myOtherArray = ['milk','sugar', 'cocoa'];
+
+			myOtherArray.push('water');
+
+			myOtherArray.splice(1,0, 'yeast','cornflakes');
+
+			console.log(myOtherArray.length);
+
+
+		document.getElementById("myButton1").onclick=function(){
+
+			if(document.getElementById("myWeather").value=="rain"){
+
+				alert("No, its not raining")
+			}else{
+
+				alert("You are close");
+			}
+
+		}
+
+
+		document.getElementById("myButton2").onclick = function(){
+
+
+
+
+
+		var y = Math.random();
+
+			y = y* 6;
+
+			y= Math.floor(y);
+
+			console.log(y);
+		
+
+
+			if(y == document.getElementById("guess").value){
+
+				alert("correct");
+
+			}else{
+				alert("Wrong. my number wAS"+ y);
+			}
+
+		}
+
+	</script>
+
+
+
+</body>
